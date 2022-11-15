@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home pagina | https://bloomscape.com/
-  <img src="readme-images/bloomscape_home-page.png" width="375px" alt="startpagina-bloomscape">
+  <img src="/readme-images/bloomscape_home-page.png" width="375px" alt="startpagina-bloomscape">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Product uitlichting | https://bloomscape.com/product/bromeliad-aechmea-pink/
-  <img src="readme-images/bloomscape_product-page.png" width="375px" alt="product-uitlichting">
+  <img src="/readme-images/bloomscape_product-page.png" width="375px" alt="product-uitlichting">
  
 </details>
 
