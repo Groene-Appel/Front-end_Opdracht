@@ -44,7 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Tablets | https://www.coolblue.nl/tablets/grote-tablets
-  <img src="readme-images/coolblue_home-page.png" width="375px" alt="Homepagina_Coolblue">
+  <img src="readme-images/coolblue_productaanbod-page.png" width="375px" alt="Tablets-en-Ipads">
  
 </details>
 
