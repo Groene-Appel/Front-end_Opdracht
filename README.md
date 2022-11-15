@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://www.coolblue.nl/
+  https://bloomscape.com/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Home pagina | https://www.coolblue.nl/
-  <img src="readme-images/coolblue_home-page.png" width="375px" alt="Homepagina_Coolblue">
+  Home pagina | https://bloomscape.com/
+  <img src="readme-images/bloomscape_home-page.png" width="375px" alt="startpagina-bloomscape">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Tablets | https://www.coolblue.nl/tablets/grote-tablets
-  <img src="readme-images/coolblue_productaanbod-page.png" width="375px" alt="Tablets-en-Ipads">
+  Product uitlichting | https://bloomscape.com/product/bromeliad-aechmea-pink/
+  <img src="readme-images/bloomscape_product-page.png" width="375px" alt="product-uitlichting">
  
 </details>
 
