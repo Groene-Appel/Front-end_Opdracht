@@ -94,10 +94,25 @@ button, summary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*------------------------------------------------------------------*/
 /*----------------------------Header--------------------------------*/
 /*------------------------------------------------------------------*/
 
+
+/* navigatie, menu en aanbiedingsbalk */
 header {
 	background-color: var(--color-background);
 	
@@ -107,10 +122,14 @@ header {
 
 	padding-bottom: .6em;
 
+	/* maakt het mogelijk om aanbiedingsbalk te verdwijnen bij het scrollen */
 	position: sticky;
-	top: -2em;
-	width: 100%;
+	top: -2.1em;
 }
+
+
+
+
 
 
 
@@ -120,32 +139,34 @@ header {
 /* Groene balk | Top van de pagina*/
 header p {
 	background-color: var(--color-background-tertiary);
-	
-	display: flex;
-	justify-content: center;
 
 	width: 100%;
 	order: -100;
 
 	font-family: 'circular';
 	font-size: 13pt;
-
 	line-height: 2em;
+	text-align: center;
 
 	padding: 0 .5em;
-
+	/* foutje */
 }
 
+
+/* aanbiedingslink */
 header p a{
 	color: var(--color-background);
 }
 
+/* aanbiedingslink hover */
 header p a:hover{
-	opacity: 80%;
+	color: pink;
 }
 
-
-
+/* aanbiedingslink focus */
+header p a:focus{
+	color: red;
+}
 
 
 
@@ -154,8 +175,6 @@ header p a:hover{
 /* logo bloomscape */
 header img {
 	width: 10.5em;
-	justify-content: center;
-
 	padding-top: .8em;
 }
 
@@ -165,13 +184,13 @@ header img {
 
 /*icoontjes | profiel / winkelwagen / zoekfucntie*/
 header nav img{
-	width: 1.6em;
+	width: 1.5em;
 }
 
 header nav:nth-of-type(2) ul{
 	display: flex;
 	gap: 1em;
-
+	padding-left: 0;
 	margin-right: 1em;
 }
 
@@ -190,6 +209,12 @@ header nav:nth-of-type(2) li:nth-of-type(2){
 }
 
 
+
+
+
+
+
+/* hier gebleven */
 
 
 
@@ -269,6 +294,11 @@ header nav:nth-of-type(1) a{
 
 
 
+
+
+
+
+
 /* sluitbutton menu */
 header nav:nth-of-type(1) button{
 	order: 1;
@@ -276,6 +306,18 @@ header nav:nth-of-type(1) button{
 	margin-top: 2em;
 	max-height: 2em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -297,6 +339,13 @@ header nav:nth-of-type(1) button{
 		position: static;
 		background: none;
 		transform: none;
+		justify-content: center;
+
+	
+		width: 80%;
+		max-width: 70em;
+
+		/* margin-top: -3em; */
 	}
 
 	header nav:nth-of-type(1) ul {
@@ -304,6 +353,7 @@ header nav:nth-of-type(1) button{
 		justify-content: center;
 
 		padding-left: 0;
+		margin-top: 0;
 	}
 
 	
@@ -321,13 +371,13 @@ header nav:nth-of-type(1) button{
 	header nav:nth-of-type(1) a{
 		color: var(--color-background-tertiary);
 	}
+
+	header nav:nth-of-type(1) li:nth-of-type(6), li:nth-of-type(7), li:nth-of-type(8){
+		display: none;
+	}
+
+
 	
-	
-
-
-
-
-
 
 	
 	/* sluitbutton menu */
@@ -362,19 +412,29 @@ h1 {
 
 
 
+
+
+
+
+
+
 /*------------------------------------------------------------------*/
-/*----------------------------Section 1-----------------------------*/
+/*----------------------------Section 1- check----------------------------*/
 /*------------------------------------------------------------------*/
 
+
+/* secttion 1 | intro pagina | Mobiel weergave */
 main section:nth-of-type(1) {
 	background-image: url("../images/afb_overig/Achtergrondsafbeelding_Bloomscape.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 
+	/* geeft een donkere laag over de afbeelding */
 	background-color: #777;
 	background-blend-mode: multiply;
-	
+
+
 	padding-top: 5em;
 	padding-bottom: 6em;
 
@@ -382,11 +442,10 @@ main section:nth-of-type(1) {
 	padding-right: 3em;
 }
 
+
+/* secttion 1 | intro pagina | Computer weergave */
 @media screen and (min-width: 551px) {
 	main section:nth-of-type(1) {
-		background-image: url("../images/afb_overig/Achtergrondsafbeelding_Bloomscape.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
 		background-position: right;
 
 		padding-top: 11.5em;
@@ -395,16 +454,19 @@ main section:nth-of-type(1) {
 }
 
 
-/* subtitel */
-main section:nth-of-type(1) h2 {
-	color: var(--color-titel-secondary);
 
+
+/* subtitel/titel | Start your plant journey this new year */
+main section:nth-of-type(1) h2 {
 	font-family: 'nib-semibold';
 	font-size: 28pt;
 	line-height: 1.5em;
 
-	padding-bottom: 0.5em;
+	color: var(--color-titel-secondary);
 
+	margin-bottom: 0.5em;
+
+	/* stuk tekst wordt bij specifieke plek afgebroken */
 	max-width: 100%;
 	width: 14em;
 }
@@ -412,99 +474,88 @@ main section:nth-of-type(1) h2 {
 
 /* subtekst */
 main section:nth-of-type(1) p {
-	color: var(--color-text-secondary);
-
 	font-family: 'circular';
 	font-size: 15pt;
 	line-height: 1.5em;
 
-	padding-bottom: 2.5em;
+	color: var(--color-text-secondary);
+
+	margin-bottom: 2.5em;
 
 	max-width: 100%;
 	width: 24em;
 }
 
 
-/* buttons (a|link) section 1 */
+
+/* linkbuttons naar andere pagina | shop beginner plants & shop all plants */
 main section:nth-of-type(1) ul {
 	display: flex;
 	flex-wrap: wrap;
-}
+	column-gap: .5em;
 
+	padding-left: 0;
+}
 
 
 main section:nth-of-type(1) li {
 	list-style: none;
 }
 
-@media screen and (max-width: 550px) {
-	main section:nth-of-type(1) li {
-		flex-basis: 100%;
-	}
-}
-
-
-
-main section:nth-of-type(1) li:nth-of-type(1) {
-	margin-left: -2.3em;
-}
 
 @media screen and (max-width: 550px) {
 	main section:nth-of-type(1) li:nth-of-type(1) {
-		padding-bottom: 3.2em;
+		margin-bottom: 3.2em;
 	}
 }
 
 
-
-@media screen and (max-width: 550px) {
-	main section:nth-of-type(1) li:nth-of-type(2) {
-		margin-left: -2.5em;
-	}
-}
-
-
-
+/* opmaak linkbuttons */
 main section:nth-of-type(1) a {
-
 	color: var(--color-text);
 	background-color: var(--color-button-secondary);
+
 
 	font-family: 'raisonne-demibold';
 	font-size: 11pt;
 	text-decoration: none;
 	text-transform: uppercase;
 
+
 	padding-left: 2.5em;
 	padding-right: 2.5em;
+
 	padding-top: 1.1em;
 	padding-bottom: 1.1em;
 
 	border-radius: 2em;
 }
 
+
+/* 2de linkbutton heeft ander kleur */
 main section:nth-of-type(1) li:nth-of-type(2) a {
 	background-color: var(--color-button-tertiary);
-	
-	margin-left: .5em;
 }
 
 
-/* hover */
+
+/* hover,active,focus linkbuttons | section 1 */
 main section:nth-of-type(1) li:nth-of-type(1) a:hover {
 	background-color: pink;
 }
-
-main section:nth-of-type(1) li:nth-of-type(2) a:hover {
-	background-color: pink;
-}
-
 
 main section:nth-of-type(1) li:nth-of-type(1) a:active {
 	background-color: pink;
 }
 
 main section:nth-of-type(1) li:nth-of-type(1) a:focus {
+	background-color: rgb(177, 48, 67);
+	color: white;
+}
+
+
+
+main section:nth-of-type(1) li:nth-of-type(2) a:hover {
 	background-color: pink;
 }
 
@@ -513,7 +564,8 @@ main section:nth-of-type(1) li:nth-of-type(2) a:active {
 }
 
 main section:nth-of-type(1) li:nth-of-type(2) a:focus {
-	background-color: pink;
+	background-color: rgb(177, 48, 67);
+	color: white;
 }
 
 
@@ -525,23 +577,41 @@ main section:nth-of-type(1) li:nth-of-type(2) a:focus {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*------------------------------------------------------------------*/
-/*----------------------------Section 2-----------------------------*/
+/*----------------------------Section 2--check---------------------------*/
 /*------------------------------------------------------------------*/
 
 
-/* opbouw section 2 */
+/* secttion 2 | as seen in */
 section:nth-of-type(2) {
 	background-color: var(--color-background-secondary);
 
 	padding-top: 2em;
 	padding-bottom: 2em;
-	padding-left: 1em;
-	padding-right: 1em;
+
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
 
 
-/* subtitel section 2 */
+/* subtitel | as seen in */
 section:nth-of-type(2) h2 {
 	color: var(--color-text);
 
@@ -554,17 +624,18 @@ section:nth-of-type(2) h2 {
 }
 
 
-/* logo's */
+/* onderdeel logo's */
 section:nth-of-type(2) ul {
 	display: flex;
 	flex-wrap: wrap;
+	row-gap: 0.5em;
 
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 0;
 }
 
 
 section:nth-of-type(2) li {
+	/* mobiele weergave 2 logo's per rij te zien */
 	flex-basis: 50%;
 
 	list-style: none;
@@ -574,19 +645,19 @@ section:nth-of-type(2) li {
 
 @media screen and (min-width: 750px) {
 	section:nth-of-type(2) li {
+		/* computer weergave 4 logo's per rij te zien */
 		flex-basis: 25%;
-		display: flex;
-		justify-content: center;
 	}
 }
 
 
 /* logo afbeeldingen */
 section:nth-of-type(2) img {
-	width: 8.5em;
-	padding: .5em;
+	width: 8em;
 } 
 
+
+/* hover over een logo laat onderlijn zien */
 section:nth-of-type(2) a:hover {
 	border: solid 2px var(--color-background-tertiary);
 	border-top: none;
@@ -596,10 +667,31 @@ section:nth-of-type(2) a:hover {
 
 
 
-
 /*------------------------------------------------------------------*/
 /*-----------------------Einde-Section-2----------------------------*/
 /*------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -618,20 +710,29 @@ section:nth-of-type(3) {
 	padding-right: 1.5em;
 
 	padding-top: 3.5em;
-	padding-bottom: 3.5em;
+	padding-bottom: 3em;
 	
 }
 
+
+/* formaat section 3 veranderd in computer weergave */
 @media screen and (min-width: 750px) {
 	section:nth-of-type(3) {
 		padding-left: 4em;
 		padding-right: 4em;
 
+		/* inhoud staat gecentreerd en heeft een maximale breedte, voorbij de breedte wordt opgevuld met witruimte */
 		max-width: 100%;
 		margin: auto;
 		width: 1450px;
 	}
 }
+
+
+
+
+
+
 
 /* section 3 subtiel */
 section:nth-of-type(3) h2 {
@@ -803,7 +904,7 @@ input[type=radio]:nth-of-type(5) {
 
 
 /*------------------------------------------------------------------*/
-/*----------------------------Section 4-----------------------------*/
+/*----------------------------Section 4-----check maar nog even hulpteksten plaatsen------------------------*/
 /*------------------------------------------------------------------*/
 
 
@@ -814,8 +915,8 @@ section:nth-of-type(4) {
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 
-	padding-top: 3.5em;
-	padding-bottom: 3.5em;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	
 	display: grid;
 	grid-template-columns: 1fr;
@@ -841,32 +942,79 @@ section:nth-of-type(4) {
 }
 
 
+section:nth-of-type(4) > div:nth-of-type(1) {
+	order: 2;
+	margin-top: 1em;
+}
+
+@media screen and (min-width: 750px) {
+	section:nth-of-type(4) > div:nth-of-type(1) {
+		margin-left: 2em;
+		margin-right: 2em;
+		margin-top: 0;
+	}
+}
+
+
+
+section:nth-of-type(4) div:nth-of-type(2) {
+	position: relative;
+  	width: 100%;
+  	overflow: hidden;
+  	padding-top: 56.25%;
+}
+
+
+/* even kijken of dit mag */
+section:nth-of-type(4) div div {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+
+
 
 section:nth-of-type(4) h2 {
 	color: var(--color-subtitel);
 	
 	font-family: 'nib-semibold';
 	font-size: 24pt;
-	margin-bottom: 1em;
+	line-height: 1.2em;
+
+	order: 2;
 }
+
 
 section:nth-of-type(4) h3 {
 	color: var(--color-subtitel);
 	
-	font-family: 'circular';
+	font-family: 'raisonne-demibold';
 	font-size: 11pt;
+	text-transform: uppercase;
 
+	margin-bottom: 1.5em;
+
+	order: 1;
 }
 
-section:nth-of-type(4) div:nth-of-type(1) {
-	order: 2;
-	padding-left: 2em;
-	padding-right: 4em;
-}
+
 
 section:nth-of-type(4) p {
 	margin-bottom: 2em;
+
+	font-family: 'circular';
+	font-size: 11pt;
+
+	line-height: 2em;
+
+	margin-bottom: 3em;
+	margin-top: 1em;
+
+	color: var(--color-text);
 }
+
+
 
 section:nth-of-type(4) a {
 	color: var(--color-button-secondary);
@@ -885,12 +1033,16 @@ section:nth-of-type(4) a {
 	border-radius: 2em;
 }
 
-section:nth-of-type(4) div:nth-of-type(2) {
-	position: relative;
-  	width: 100%;
-  	overflow: hidden;
-  	padding-top: 56.25%;
+section:nth-of-type(4) a:hover {
+	background-color: pink;
+	color: var(--color-button);
 }
+
+section:nth-of-type(4) a:focus {
+	background-color: rgb(177, 48, 67);
+	color:white;
+}
+
 
 iframe {
 	position: absolute;
@@ -901,8 +1053,6 @@ iframe {
   	width: 100%;
   	height: 100%;
   	border: none;
-
-	z-index: 0;
 }
 
 /*------------------------------------------------------------------*/
@@ -930,12 +1080,13 @@ iframe {
 /* section 5 | More ways to find the perfect plant */
 
 section:nth-of-type(5) {
-	background-color: var(--color-background);
-	padding-top: 4em;
-	padding-bottom: 4em;
+	margin-top: 4em;
+	margin-bottom: 4em;
+
 	padding-left: 2em;
 	padding-right: 2em;
 }
+
 
 @media screen and (min-width: 750px) {
 	section:nth-of-type(5) {
@@ -955,8 +1106,14 @@ section:nth-of-type(5) h2 {
 	font-family: 'nib-semibold';
 	color: var(--color-subtitel);
 	font-size: 20pt;
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
+
+
+
+
+
+
 
 section:nth-of-type(5) ul{
 	display: flex;
@@ -988,7 +1145,7 @@ section:nth-of-type(5) img{
 }
 
 section:nth-of-type(5) img:nth-of-type(1){
-	width: 100%;
+	/* width: 100%; */
 	padding-left: 0;
 	padding-right: 1em;
 }
@@ -1003,7 +1160,9 @@ section:nth-of-type(5) figcaption {
 
 	text-align: center;
 	font-family: 'nib-semibold';
-	
+
+	font-size: 12pt;
+	margin-right: 1em;
 }
 
 /*-----------------------Einde-----------------------------*/
@@ -1016,10 +1175,134 @@ section:nth-of-type(5) figcaption {
 
 
 
-/**********/
-/* footer */
-/**********/
 
+
+
+
+
+
+/* Section 6 */
+
+section:nth-of-type(6) {
+	background-color: var(--color-background);
+
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+
+	margin-top: 2em;
+	margin-bottom: 2em;
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+
+}
+
+@media screen and (min-width: 750px) {
+	section:nth-of-type(6) {
+		padding-left: 4em;
+		padding-right: 4em;
+
+		padding-top: 4em;
+		padding-bottom: 4em;
+
+		max-width: 100%;
+		margin: auto;
+		width: 1450px;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+
+
+section:nth-of-type(6) h2 {
+	color: var(--color-subtitel);
+	
+	font-family: 'nib-semibold';
+	font-size: 24pt;
+	line-height: 1.2em;
+
+	order: 2;
+}
+
+
+section:nth-of-type(6) h3 {
+	color: var(--color-subtitel);
+	
+	font-family: 'raisonne-demibold';
+	font-size: 11pt;
+	text-transform: uppercase;
+
+	margin-bottom: 1.5em;
+
+	order: 1;
+}
+
+
+
+section:nth-of-type(6) p {
+	margin-bottom: 2em;
+
+	font-family: 'circular';
+	font-size: 11pt;
+
+	line-height: 2em;
+
+	margin-bottom: 3em;
+	margin-top: 1em;
+
+	color: var(--color-text);
+}
+
+
+
+section:nth-of-type(6) a {
+	color: var(--color-button-secondary);
+	background-color: var(--color-button);
+
+	font-family: 'raisonne-demibold';
+	font-size: 11pt;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+	padding-top: 1.1em;
+	padding-bottom: 1.1em;
+
+	border-radius: 2em;
+}
+
+section:nth-of-type(6) a:hover {
+	background-color: pink;
+	color: var(--color-button);
+}
+
+section:nth-of-type(6) a:focus {
+	background-color: rgb(177, 48, 67);
+	color:white;
+}
+
+
+section:nth-of-type(6) img {
+  	width: 100%;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------*/
+/*---------------------------footer---------------------------------*/
+/*------------------------------------------------------------------*/
+
+/* section wordt door 4 stukjes gedeeld onderelkaar */
 footer section:nth-of-type(1) {
 	background-color: var(--color-background-tertiary);
 	color: var(--color-background-secondary);
@@ -1035,7 +1318,8 @@ footer section:nth-of-type(1) {
 
 }
 
-
+/* section word door 2 stukjes verdeeld */
+/* max moet nog naar min */
 @media screen and (max-width: 600px) {
 	footer section:nth-of-type(1) {
 		background-color: var(--color-background-tertiary);
@@ -1053,7 +1337,7 @@ footer section:nth-of-type(1) {
 	}
 }
 
-
+/* section staan alle stukjes naast elkaar */
 @media screen and (min-width: 1000px) {
 	footer section:nth-of-type(1) {
 		background-color: var(--color-background-tertiary);
@@ -1103,6 +1387,8 @@ footer section:nth-of-type(1) a {
 	color: var(--color-button-secondary);
 	font-family: 'circular';
 }
+
+
 
 footer section:nth-of-type(1) li {
 	list-style: none;

@@ -1,0 +1,604 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box; 
+  border: 0;
+  margin: 0; 
+}
+
+button, summary {
+	cursor: pointer;
+}
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+
+
+/* fonts */
+@font-face {
+	font-family: 'circular';
+	src: url('../fonts/circular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'circular-bold';
+	src: url('../fonts/circular-bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'nib-semibold';
+	src: url('../fonts/nib-semibold-pro.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'nib-semibold-italic';
+	src: url('../fonts/nib-semibold-italic-pro.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'nib-bold';
+	src: url('../fonts/nib-bold-pro.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'raisonne-demibold';
+	src: url('../fonts/raisonne-demibold.woff2') format('woff2');
+}
+
+
+
+/* kleur */
+:root {
+	/* kleur achtergrond */
+	--color-background:#fcf9f3;
+	--color-background-secondary:#f8f3e7;
+	--color-background-tertiary:#224229;
+	--color-background-quaternary:#63180E;
+	
+	/* kleur text */
+	--color-text:#224229;
+	--color-text-secondary:#f6cfb2;
+
+	--color-titel:#224229;
+	--color-titel-secondary:#f8f3e7;
+
+	--color-subtitel:#224229;
+	--color-subtitel-secondary:#f8f3e7;
+
+	/* kleur button */
+	--color-button:#224229;
+	--color-button-secondary:#f4ebdb;
+	--color-button-tertiary:#f6cfb2;
+
+	--color-button-hover-primary: #f8f1e3;
+	--color-button-hover-secondary:#f4c49f;
+
+	/* kleur radio buttons */
+	--color-radio-stone:#e6e8ea;
+	--color-radio-clay:#c78356;
+	--color-radio-charcoal:#3b4037;
+	--color-radio-slate:#b7c7cd;
+	--color-radio-indigo:#3b5d7d;
+
+	/* kleur aanbieding */
+	--color-aanbieding-new:#018342;
+	--color-aanbieding-korting:#23356d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------*/
+/*------------------------------Main--------------------------------*/
+/*------------------------------------------------------------------*/
+
+main {
+	background-color: var(--color-background);
+}
+
+/* titel verborgen */
+h1 {
+	display: none;
+}
+
+
+
+/*------------------------------------------------------------------*/
+/*----------------------------Section 1-----------------------------*/
+/*------------------------------------------------------------------*/
+
+
+/* main section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-column-gap: 8em;
+	grid-row-gap: 2em;
+
+	max-width: 100%;
+	margin: auto;
+	width: 1200px;
+} */
+
+main section {
+	display: grid;
+	grid-template-rows: 22em 1fr 14em 1fr;
+
+	row-gap: 2em;
+
+	margin-top: 3em;
+
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+
+section ul {
+	overflow: auto;
+	display: flex;
+	padding-left: 0;
+
+	height: 22em;
+}
+
+
+section li {
+	list-style: none;
+	margin-right: .8em;
+}
+
+
+section img {
+	width: 17em;
+	height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+form {
+	display: grid;
+	grid-template-columns: 7em 2fr 1fr;
+	grid-template-rows: 3em 1fr 10em 1fr;
+}
+
+
+form h2 {
+	/* de plaatsing in het grid */
+	grid-column-start: 1;
+	grid-column-end: 3;
+
+	grid-row-start: 1;
+	grid-row-end: 2;
+
+
+	color: var(--color-background-tertiary);
+
+	font-family: 'nib-semibold';
+	font-size: 14pt;
+
+	align-self: center;
+}
+
+
+
+/* prijs product */
+form p:nth-of-type(1) {
+	grid-column-start: 3;
+	grid-column-end: 4;
+
+	grid-row-start: 1;
+	grid-row-end: 2;
+
+	/* wordt aan het einde geplaatst van stukje */
+	justify-self: end;
+
+	color: var(--color-background-tertiary);
+
+	font-family: 'nib-semibold';
+	font-size: 14pt;
+
+	align-self: center;
+}
+
+
+
+/* tekst over het product */
+form p:nth-of-type(2) {
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	grid-row-start: 2;
+	grid-row-end: 3;
+
+	color: var(--color-background-tertiary);
+
+	font-family: 'circular';
+	font-size: 10pt;
+
+	line-height: 1.5em;
+
+	align-self: center;
+}
+
+form fieldset {
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	grid-row-start: 3;
+	grid-row-end: 4;
+
+	align-self: center;
+	padding-left: 0;
+}
+
+
+/* geinidngt */
+
+
+/* styling radio buttons*/
+input[type=radio] {
+	appearance: none;
+	background-color: #fff;
+	margin: 0;
+
+	width: 2.8em;
+	height: 2.8em;
+
+	margin-left: .8em;
+	margin-right: .8em;
+
+	border-radius: 70%;
+
+	display: grid;
+	place-content: center;
+}
+
+
+/* radio button omlijning (geslecteerd) */
+fieldset {
+	display: flex;
+}
+
+legend {
+	text-transform: uppercase;
+	font-family: 'raisonne-demibold';
+	font-size: 11pt;
+	color: var(--color-background-tertiary);
+	margin-bottom: 1em;
+}
+
+input[type=radio]::before {
+	content: "";
+	width: 3.4em;
+	height: 3.4em;
+
+	border-radius: 70%;
+	transform: scale(0);
+
+	border: 0.15em solid var(--color-background-tertiary);
+}
+
+input[type=radio]:checked:before {
+	transform: scale(1);
+}
+
+
+/* radio buttons kleur en formaat */
+input[type=radio]:nth-of-type(1) {
+	box-shadow: inset 2.8em 2.8em var(--color-radio-stone);
+}
+
+input[type=radio]:nth-of-type(2) {
+	box-shadow: inset 2.8em 2.8em var(--color-radio-clay);
+}
+
+input[type=radio]:nth-of-type(3) {
+	box-shadow: inset 2.8em 2.8em var(--color-radio-charcoal);
+}
+
+input[type=radio]:nth-of-type(4) {
+	box-shadow: inset 2.8em 2.8em var(--color-radio-slate);
+}
+
+input[type=radio]:nth-of-type(5) {
+	box-shadow: inset 2.8em 2.8em var(--color-radio-indigo);
+}
+
+
+/* opmaak aantal knop */
+section form > div {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+
+	border: solid 1px var(--color-button);
+	/* width: 5em; */
+	/* padding-top: .5em;
+	padding-bottom: .5em; */
+	border-radius: 28px;
+
+	align-items: center;
+	justify-items: center;
+
+	align-self: center;
+
+	padding-top: .8em;
+	padding-bottom: .8em;
+
+	padding-left: .2em;
+	padding-right: .2em;
+	
+}
+
+section form > div button {
+	background-color: transparent;
+	font-size:  17pt;
+	
+}
+
+section form > button {
+	/* grid-column-start: 2;
+	grid-column-end: 3;
+
+	grid-row-start: 4;
+	grid-row-end: 5; */
+
+	align-self: center;
+	justify-self: start;
+	margin-left: 1em;
+
+
+
+	color: var(--color-text);
+	background-color: var(--color-background-tertiary);
+	color: white;
+
+
+	font-family: 'raisonne-demibold';
+	font-size: 11pt;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	padding-top: 1.2em;
+	padding-bottom: 1.2em;
+
+	padding-left: 1.2em;
+	padding-right: 1.2em;
+
+	border-radius: 2em;
+}
+
+
+
+
+
+
+section > div:nth-of-type(2) {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	justify-items: center;
+}
+
+section div:nth-of-type(2) h2 {
+	text-align: center;
+
+	color: var(--color-background-tertiary);
+
+	font-family: 'nib-semibold';
+	font-size: 14pt;
+}
+
+section div:nth-of-type(2) h2:nth-of-type(1) {
+	order: 2;
+}
+
+section div:nth-of-type(2) h2:nth-of-type(2) {
+	order: 5;
+}
+
+
+
+section div:nth-of-type(2) p {
+	text-align: center;
+
+	font-family: 'circular';
+	font-size: 10pt;
+
+	line-height: 1.5em;
+	color: var(--color-background-tertiary);
+}
+
+section div:nth-of-type(2) p:nth-of-type(1) {
+	text-align: center;
+	order: 3;
+
+	margin-bottom: 2em;
+
+}
+
+section div:nth-of-type(2) p:nth-of-type(2) {
+	text-align: center;
+	order: 6;
+
+}
+
+
+
+section div:nth-of-type(2) img {
+	width: 35px;
+}
+
+
+section div:nth-of-type(2) img:nth-of-type(1) {
+	width: 35px;
+	order: 1;
+}
+
+section div:nth-of-type(2) img:nth-of-type(2) {
+	width: 35px;
+	order: 4;
+}
+/*------------------------------------------------------------------*/
+/*-----------------------Einde-Section-1----------------------------*/
+/*------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+/* Uitklapmenu */
+
+section > div:nth-of-type(3) h2{
+	color: var(--color-background-tertiary);
+
+	font-family: 'raisonne-demibold';
+	text-transform: uppercase;
+	font-size: 12pt;
+}
+
+section > div:nth-of-type(3) div:nth-of-type(1){
+	display: flex;
+}
+
+
+.collapsible {
+	background-color: var(--color-background-secondary);
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+  }
+
+
+  section > div:nth-of-type(3) button{
+	background-color: transparent;
+}
+
+  
+  .active, .collapsible:hover {
+	background-color: #555;
+  }
+  
+  .content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+  }
+
+
+
+
+
+
+
+
+
+
+/* 
+  header  */
