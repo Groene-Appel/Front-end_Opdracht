@@ -117,8 +117,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-  De eerste week had ik html gedaan voor mijn gevoel ging het goed. liep wel achter 
+  In de eerste week ben ik begonnen met de HTML, hierbij heb ik mijn eerste pagina in Illutrator zitten ontleden, wat voor code/elementen op dat stukje hoort.
+  Voor mijn gevoel ging het goed, totdat de docent langs kwam en zei dat deze element niet hoort te staan.
+
+  Ik heb mijn pagina onder verschillende sections geplaatst, sommige sections zijn als het ware in 2je geldeeld, ik dacht dan kan ik hier een article ervoor gebruiken om de 2deling mogelijk te maken.
+  Dit was niet geval en mocht officeel niet, inplaatst daarvan moest ik divs gebruiken. Dit heb ik vervolgens gedaaan.
+
+  Veder heb ik de pagina opgedeeld door gebruik te maken van kleuren om makkelijk onderscheidt te maken tussen verschillende onderdelen.
+  (afbeelding toevoegen van mijn schets)
+
+
+  Vervolgens ben ik in HTML de opbouw van mijn pagina zitten schrijven, dit heb ik grotendeels overgenomen van mijn gemaakte schets/ontleding van mijn pagina. Voormij gevoel ging het goed, maar blijkbaar zat ik nog op schema, waarbij ik halva html pagina had, moest dit eigenlijk al voor het gesprek afwezen met al CSS. Ik moest vaart maken.
 
 
   ### Agenda voor meeting
@@ -133,12 +142,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  Tijdens het gesprek moest ieder 1 voor 1 even zijn voortgang laten ziet, hierbij deden we direct een feedback ronden, waarbij de docent bij ieder persoon een klein stukje code ging beoordelen.
+  Na afloop kwamen bij mij de volgende punten naar voren:
 
-  - De titel had ik verkeerd gedaan, voor de screenreader is het handig als er een duidelijke titel is (maar is dan wel onzichtbaar).
-  - Gebruik van artikel is verkeerd, moest helemaal geen artikle zijn.
-  - Subtiels zijn allemaal h2.
-  - de volgorde op sommige plekken anders.
+  - Wat ik eerst dag dat je de 'h' elementen de volorde over de gehele pagina doet met dezelfde uitelijk. 1 titel (h1), sub titels (h2), kopjes (h3), ect, maar als ik het goed heb bepregen moet je ieder stuk iets individueels zien, elk stuk begint met een h2 ongeacht de stijl, formaat en grote. Wat ik verkeerd had gedaan is dat mijn titel geen goede titel is voor een h1 doordat het voor gebruikers met screenreaders niet duidelijk is wat de site inhoudt. Ik moest daarom een titel verzinnen die aangaf om wat voor site het ging/de gebruiker groeten en vervolgens het element verborgen.
+
+  - Dit had ik al eerder benoemd het gebruik van het element article is verkeerd. Hierbij had ik het begrip verkeerd toegepast in mijn website. Het moest geen article zijn maar een div.
+
+  - Ook moet ik opletten op de volorde van het plaatsen van elementen in mijn HTML, Ik had bij sommige plekken de volorde verkeerd toegepast, ik verwachten dat wat je ziet de juiste volorde is, is niet zo. Je moet altijd beginnen met en 'h' element (als dit natuurlijk aanwezig is, anders niet) en daarna komt bijv. een afbeelding, om het wel in de juiste weergave te laten tonen moest ik gebruik maken van een order of andere css elementen waarbij de volorde veranderd kan worden van html elementen.
 
 </details>
 
@@ -152,8 +163,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  Tijdens deze werkgroep geen voortgang op mijn werk aangebracht, alleen groene balk boven aan de pagina, meer niet.
+  Moet eerlijk toegeven dat ik tijdens deze sprint naulijks tot niks vooruitgang heb geboekt, wegens drukte door andere vakken. Ik heb de feedback verwerkt en mijn HTML verbeterd en de eerrste pagina zo goed als afgerond. Daarnaast ben ik met 1 stukje begonnen met in CSS, de aanbiedingsbalk boven aan de pagina. Dit lukte niet helemaal doordat het in een nav zat met andere elmementen, maar wel de volledige breedte nodig had van pagina. Hier was ik wel even zoet mee.
 
+  langste onderdeel section 3 de carosel, hier heb ik veel tijd in besteed om alles goed werkend te krijgen.
 
   ### Agenda voor meeting
   samen met je groepje opstellen | Gezammelijk kozen wij een momentje samen om onze voortgang te bespreken.
@@ -167,9 +179,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
+  Tijdens mijn voortang liet ik zien wat ik had, niet veel dus, maar de docent heeft mij geholpen waar ik vast liep, de aanbiedingsbalk over de heel breedte plaatsen. Ik moest dus gebruik maken van een flexbasis (nav/ul was een flexbox toegepast), hierbij moest ik de juiste elment nemen en een flexbasis geven van 100%, de groenebalk liep van links naar rechts.
 
-  - Geen, omdat ik geen voortuigang had geboekt.
-
+  - Verder geen vooruitgang geboekt doordat ik niet veel veder ben gekomen, vergeleken met de vorige keer.
 </details>
 
 
@@ -183,6 +195,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Ik zelf had nog niet veel, en deze werkgroep was niet helemaal nuttig voor mij (niet waar)
 
   #### Screenreader
   Eerlijk gezegd, kon dit beter alleen weet ik niet helemaal hoe. Er zijn stukken wat de vertellen voledig leest, maar stopt vervolgens met spreken.
@@ -224,7 +237,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  Na een hele vakantie eraan zitten werken heb ik de basis zo goed als af, bleek achteraf nog een hoop moet gaan doen.
+  Na de vakantie heb ik hele grote vooruitgang gemaakt,.....Na een hele vakantie eraan zitten werken heb ik de basis zo goed als af, bleek achteraf nog een hoop moet gaan doen.
 
 
   ### Agenda voor meeting
