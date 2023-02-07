@@ -195,7 +195,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
-  Ik zelf had nog niet veel, en deze werkgroep was niet helemaal nuttig voor mij (niet waar)
+
+  (nog niet afgeschreven komt nog)
 
   #### Screenreader
   Eerlijk gezegd, kon dit beter alleen weet ik niet helemaal hoe. Er zijn stukken wat de vertellen voledig leest, maar stopt vervolgens met spreken.
@@ -239,6 +240,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   Na de vakantie heb ik hele grote vooruitgang gemaakt,.....Na een hele vakantie eraan zitten werken heb ik de basis zo goed als af, bleek achteraf nog een hoop moet gaan doen.
 
+  (nog niet af komt nog)
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen | Gezammelijk kozen wij een momentje samen om onze voortgang te bespreken.
@@ -275,7 +278,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  waar ik trots op ben is de opbouw van dit onderdeel (zie afbeelding), net als het responsive maken tussen desktop weergave en mobiele weergave.
+  waar ik trots op ben is de opbouw van dit onderdeel (zie afbeelding), net als het responsive maken tussen desktop weergave en mobiele weergave. Dit ging niet zonder slag of stoot 
   <img src="readme-images/Section-3.jpg" width="375px" alt="top">
 
 
