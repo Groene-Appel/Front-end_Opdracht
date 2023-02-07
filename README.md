@@ -185,27 +185,32 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Eerlijk gezegd, kon dit beter alleen weet ik niet helemaal hoe. Er zijn stukken wat de vertellen voledig leest, maar stopt vervolgens met spreken.
+  Kun je moeilijk een volgende stukje tekst aan klikken. Als oplossing functies toevoegen die te besturen zijn met een toetsenbord, zodat je met de toetsenbord door alle teksten kunt navigeren.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  nu pakt het alle butten en linkjes met het toestenbord, maar slaat p-jes bijv. over en die worden ook niet opgelezen.
+
+  logo afbeeldingen (in "As seen in"), in de beschrijving zetten dat het om een logo gaat, dit is nu niet duidelijk.
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  > Alle mogelijke en belangerijke ineteracties zijn met alleen te toetsenbord te bedienen
+  > Met de muis volledig toegangelijk (als ik het onderdeel muis goed heb begrepen)
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Motoriek blijft een lastig onderdeel, je kunt met de toetsenbord werken, wat een betere oplossing is een spraakfunctie eraan toevoegen die doormiddel van je stem door de website kunt navigeren.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  aantal bevindingen:
+  > De knoppen zijn groot en zijn hierdoor moelijker te missen.
+  > Gebruiker kan met toetsenbord besturen en hierdoor makkelijker bij kleine onderdelen komen (zoals het kiezen van een kleur).
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  > Met het checken van het contrast zit alles goed.
+  > Met het veranderen van kleuren op het scherm waren sommige plekken iets lastiger te lezen (bijv. als je over een button hovert), dit heb ik opgelost een tegengestelde kleur eraan toe te voegen als je erop focust en hovert. zo ziet de gebruiker dat er interactie mee kan worden gevoerd.
+  > Gebruik gemaakt van redelijk grote teksten zodat het beter leesbaar is voor slechtziende.
+  > Duidelijke grote knoppen, ze zijn goed leesbaar en opvallend.
+  > sommig leesteksten zijn door de lettertype iets minder goed leesbaar, beter is om een meer dikgedrukte font te kiezen.
 
 </details>
 
@@ -246,24 +251,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 
-## Eindgesprek (week 5)
+## Eindgesprek | Herkansing
 
 <details>
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/Pagina-1.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Pagina-1.jpg" width="375px" alt="uitkomst pagina 1">
+  <img src="readme-images/Pagina-2.jpg" width="375px" alt="uitkomst pagina 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  waar ik trots op is de opbouw van dit onderdeel (zie afbeelding)
+  waar ik trots op ben is de opbouw van dit onderdeel (zie afbeelding), net als het responsive maken tussen desktop weergave en mobiele weergave.
   <img src="readme-images/Section-3.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Helaas zijn veel dingen niet gelukt wat ik wil bereiken o.a. 2 pagina. Waar ik veel (te) tijd heb ingestoken is de menubalk dat niet werkt of na ja de vormgeving is verkeerd (in desktop weergave).
+  Eingesprek| Helaas zijn veel dingen niet gelukt wat ik wil bereiken o.a. 2 pagina. Waar ik veel (te) tijd heb ingestoken is de menubalk dat niet werkt of na ja de vormgeving is verkeerd (in desktop weergave).
 
+  Herkansing | Ondertussen heb ik voor alles een oplossing verzonnen en toegepast wat eerst niet lukte, Wat helaas momenteel niet gelukt is om namen van de gekozen radio button bij iedere product te laten veranderen, werkte alleen bij 1 product. Na verschillende dingen te proberen heb ik het maar bij 1 product gehouden.
   <img src="readme-images/Menubalk-mislukt.jpg" width="375px" alt="bummer">
+  <img src="dit-was-lastig" width="375px" alt="bummer">
 </details>
 
 
@@ -279,7 +287,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   1. https://moderncss.dev/pure-css-custom-styled-radio-buttons/ | heeft mij geholpen om custum radio buttons te maken.
   2. https://www.w3schools.com/howto/howto_css_responsive_iframes.asp | Heeft mij geholpen om een responsive video frame te maken.
-  3. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ | Begrijpen van flexbox
-  4. https://css-tricks.com/snippets/css/complete-guide-grid/ | Begrijpen van grid
+  3. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ | Begrijpen van flexbox.
+  4. https://css-tricks.com/snippets/css/complete-guide-grid/ | Begrijpen van grid.
+  5. https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_animate | Code over genomen om een uitklapmenu te maken, bij het ontleden ervan niet veel wijzer van geworden.
+  6. Aantal producten kiezen, gekeken van oude school opdracht, hoe de javascript ookalweer in elkaar zat.
 
 </details>
