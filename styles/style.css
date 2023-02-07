@@ -55,14 +55,14 @@ button, summary {
 /* kleur */
 :root {
 	/* kleur achtergrond */
-	--color-background:#fcf9f3;
+	--color-background-primary:#fcf9f3;
 	--color-background-secondary:#f8f3e7;
 	--color-background-tertiary:#224229;
 	--color-background-quaternary:#63180E;
 	
 	/* kleur text */
 	--color-text:#224229;
-	--color-text-secondary:#f6cfb2;
+	--color-text-secondary:#f8f3e7;
 
 	--color-titel:#224229;
 	--color-titel-secondary:#f8f3e7;
@@ -75,8 +75,8 @@ button, summary {
 	--color-button-secondary:#f4ebdb;
 	--color-button-tertiary:#f6cfb2;
 
-	--color-button-hover-primary: #f8f1e3;
-	--color-button-hover-secondary:#f4c49f;
+	--color-button-hover-primary:#ffc0cb;
+	--color-button-hover-secondary:#b13043;
 
 	/* kleur radio buttons */
 	--color-radio-stone:#e6e8ea;
@@ -88,18 +88,17 @@ button, summary {
 	/* kleur aanbieding */
 	--color-aanbieding-new:#018342;
 	--color-aanbieding-korting:#23356d;
+
+	/* kleur (a) link */
+	--color-link-primary:#224229;
+	--color-link-secondary:#f4ebdb;
+	--color-link-tertiary:#f6cfb2;
+
+	/* kleur hover & focus (a | links) */
+	--color-hover-primary:#ffc0cb;
+	--color-hover-secondary:#b13043;
+	--color-focus: #b13043;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -114,11 +113,13 @@ button, summary {
 
 /* navigatie, menu en aanbiedingsbalk */
 header {
-	background-color: var(--color-background);
+	background-color: var(--color-background-primary);
 	
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
+	align-items: center;
 
 	padding-bottom: .6em;
 
@@ -131,14 +132,9 @@ header {
 
 
 
-
-
-
-
-
 /* Groene balk | Top van de pagina*/
 header p {
-	background-color: var(--color-background-tertiary);
+	background-color: var(--color-text);
 
 	width: 100%;
 	order: -100;
@@ -149,26 +145,23 @@ header p {
 	text-align: center;
 
 	padding: 0 .5em;
-	/* foutje */
 }
 
 
 /* aanbiedingslink */
 header p a{
-	color: var(--color-background);
+	color: var(--color-background-secondary);
 }
 
 /* aanbiedingslink hover */
 header p a:hover{
-	color: pink;
+	color: var(--color-hover-primary);
 }
 
 /* aanbiedingslink focus */
 header p a:focus{
-	color: red;
+	color: var(--color-focus);
 }
-
-
 
 
 
@@ -180,17 +173,16 @@ header img {
 
 
 
-
-
-/*icoontjes | profiel / winkelwagen / zoekfucntie*/
+/* icoontje | winkelwagen */
 header nav img{
 	width: 1.5em;
+	justify-content: end;
 }
 
+
 header nav:nth-of-type(2) ul{
-	display: flex;
-	gap: 1em;
 	padding-left: 0;
+	margin-left: .1em;
 	margin-right: 1em;
 }
 
@@ -200,42 +192,29 @@ header nav:nth-of-type(2) li{
 	align-self: center;
 }
 
-header nav:nth-of-type(2) li:nth-of-type(1){
-	display: none;
-}
-
-header nav:nth-of-type(2) li:nth-of-type(2){
-	display: none;
-}
-
-
-
-
-
-
-
-/* hier gebleven */
-
-
 
 
 /* menubutton */
 header button {
 	order: -50;
 
-	border-radius: .5em;
+	border-radius: 1.2em;
 	background-color: var(--color-button);
 	color: var(--color-button-secondary);
 
 	padding-left: 1em;
 	padding-right: 1em;
+	padding-top: .5em;
+	padding-bottom: .5em;
 
 	margin-top: .7em;
 	margin-left: 1em;
+
 }
 
 
-/* menu */
+
+/* menu verborgen | mobiele weergave */
 header nav:nth-of-type(1) {
 	display: flex;
 	justify-content: space-between;
@@ -251,8 +230,14 @@ header nav:nth-of-type(1) {
 
 	background-color: var(--color-background-tertiary);
 	transform: translateX(-100%);
+
+	/* de sluit button (X) komt boven in te staan */
+	align-items: flex-start;
 }
 
+
+
+/* opmaak menu */
 header nav:nth-of-type(1) ul {
 	padding: 0;
 	margin-top: 3em;
@@ -267,17 +252,11 @@ header nav:nth-of-type(1) a {
 
 header nav:nth-of-type(1) a:hover {
 	border: solid 1px var(--color-button-hover-primary);
+
+	border-top: none;
+	border-left: none;
+	border-right: none;
 }
-
-
-
-
-
-header nav:nth-of-type(1).actief{
-	transform: translateX(0%);
-}
-
-
 
 header nav:nth-of-type(1) li{
 	list-style: none;
@@ -286,16 +265,16 @@ header nav:nth-of-type(1) li{
 	padding: 1em;
 }
 
-header nav:nth-of-type(1) a{
-	color: white;
+
+
+/* als er op de button gedrukt wordt verplaatst het verborgen gedeelte op het scherm (van links naar rechts) (mobiele weergave) */
+header nav:nth-of-type(1).actief{
+	transform: translateX(0%);
 }
 
-
-
-
-
-
-
+header nav:nth-of-type(1) a{
+	color: var(--color-link-secondary);
+}
 
 
 
@@ -303,38 +282,41 @@ header nav:nth-of-type(1) a{
 header nav:nth-of-type(1) button{
 	order: 1;
 	position: static;
-	margin-top: 2em;
-	max-height: 2em;
+	margin-top: .5em;
+
+	font-family: 'circular-bold';
+	text-transform: uppercase;
+	font-size: 20pt;
+	color: var(--color-background-primary);
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* navigatie op desktop weergave */
 @media (min-width:60em) {
 
-	/* menubutton */
+
+	/* verwijdering van de padding zodat boven als onder evenveel witruimte heeft */
+	header {
+		padding-bottom: 0;
+	}
+
+
+	/* menubutton wordt verwijderd/onzichtbaar */
 	header button {
 		display: none;
 	}
 
-	
+
+	/* logo bloomscape */
+	header img {
+		width: 10.5em;
+		padding-top: .8em;
+		margin-left: 2em;
+		}
+
+
+	/* Opmaak mobiele menu wordt op navigatie desktop weergave geplaatst (opmaak veranderd dus) */
 	header nav:nth-of-type(1) {
 		position: static;
 		background: none;
@@ -342,12 +324,15 @@ header nav:nth-of-type(1) button{
 		justify-content: center;
 
 	
-		width: 80%;
-		max-width: 70em;
+		width: 60%;
+		max-width: 50em;
 
-		/* margin-top: -3em; */
+		/* grid (menu onderdelen) verticaal centreren op de pagina */
+		justify-content: center;
 	}
+	
 
+	/* opmaak koppelingen dat uit het menu op de navigatie balk geplaatst wordt (lijst wordt verticaal naast elkaar geplaatst)*/
 	header nav:nth-of-type(1) ul {
 		display: flex;
 		justify-content: center;
@@ -356,31 +341,32 @@ header nav:nth-of-type(1) button{
 		margin-top: 0;
 	}
 
-	
-	
-	header nav:nth-of-type(1).actief{
-		transform: none;
-	}
-	
-	
-	
-	header nav:nth-of-type(1) li{
-		list-style: none;
-	}
-	
+
+	/* kleur verandering dat zichtbaar is op lichte achtergrond */
 	header nav:nth-of-type(1) a{
 		color: var(--color-background-tertiary);
 	}
 
+
+	/* hover en focus states */
+	header nav:nth-of-type(1) a:hover {
+		color: var(--color-button-hover-secondary);
+		border-color: var(--color-background-tertiary);
+	}
+
+
+	header nav:nth-of-type(1) a:focus {
+		color: var(--color-focus);
+	}
+
+
+	/* verwijderen van linkjes die niet in de navigatie balk staan. */
 	header nav:nth-of-type(1) li:nth-of-type(6), li:nth-of-type(7), li:nth-of-type(8){
 		display: none;
 	}
 
-
 	
-
-	
-	/* sluitbutton menu */
+	/* sluitbutton niet nodig op desktopversie */
 	header nav:nth-of-type(1) button{
 		display: none;
 	}
@@ -394,32 +380,26 @@ header nav:nth-of-type(1) button{
 
 
 
+
+
+
 /*------------------------------------------------------------------*/
 /*------------------------------Main--------------------------------*/
 /*------------------------------------------------------------------*/
 
 main {
-	background-color: var(--color-background);
+	background-color: var(--color-background-primary);
 }
 
-/* titel verborgen */
+/* titel verborgen | screenreader */
 h1 {
 	display: none;
 }
 
 
 
-
-
-
-
-
-
-
-
-
 /*------------------------------------------------------------------*/
-/*----------------------------Section 1- check----------------------------*/
+/*----------------------------Section 1----------------------------*/
 /*------------------------------------------------------------------*/
 
 
@@ -430,16 +410,16 @@ main section:nth-of-type(1) {
 	background-size: cover;
 	background-position: center;
 
-	/* geeft een donkere laag over de afbeelding */
-	background-color: #777;
-	background-blend-mode: multiply;
-
-
 	padding-top: 5em;
 	padding-bottom: 6em;
 
 	padding-left: 3em;
 	padding-right: 3em;
+
+	/* geeft een donkere laag over de achtergrondsafbeelding */
+	background-color: #777;
+	background-blend-mode: multiply;
+
 }
 
 
@@ -584,18 +564,8 @@ main section:nth-of-type(1) li:nth-of-type(2) a:focus {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /*------------------------------------------------------------------*/
-/*----------------------------Section 2--check---------------------------*/
+/*----------------------------Section 2-----------------------------*/
 /*------------------------------------------------------------------*/
 
 
@@ -625,7 +595,7 @@ section:nth-of-type(2) h2 {
 
 
 /* onderdeel logo's */
-section:nth-of-type(2) ul {
+main section:nth-of-type(2) ul {
 	display: flex;
 	flex-wrap: wrap;
 	row-gap: 0.5em;
@@ -634,7 +604,7 @@ section:nth-of-type(2) ul {
 }
 
 
-section:nth-of-type(2) li {
+main section:nth-of-type(2) li {
 	/* mobiele weergave 2 logo's per rij te zien */
 	flex-basis: 50%;
 
@@ -644,7 +614,7 @@ section:nth-of-type(2) li {
 }
 
 @media screen and (min-width: 750px) {
-	section:nth-of-type(2) li {
+	main section:nth-of-type(2) li {
 		/* computer weergave 4 logo's per rij te zien */
 		flex-basis: 25%;
 	}
@@ -679,24 +649,6 @@ section:nth-of-type(2) a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*------------------------------------------------------------------*/
 /*----------------------------Section 3-----------------------------*/
 /*------------------------------------------------------------------*/
@@ -704,7 +656,7 @@ section:nth-of-type(2) a:hover {
 
 /* section 3 | Bestsellers */
 section:nth-of-type(3) {
-	background-color: var(--color-background);
+	background-color: var(--color-background-primary);
 
 	padding-left: 1.5em;
 	padding-right: 1.5em;
@@ -731,10 +683,7 @@ section:nth-of-type(3) {
 
 
 
-
-
-
-/* section 3 subtiel */
+/* section 3 subtitel */
 section:nth-of-type(3) h2 {
 	color: var(--color-background-tertiary);
 
@@ -889,6 +838,28 @@ input[type=radio]:nth-of-type(5) {
 }
 
 
+section:nth-of-type(3) div > a {
+	border-radius: 1.2em;
+	background-color: var(--color-button);
+	color: var(--color-button-secondary);
+
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+
+	text-align: center;
+	text-decoration: none;
+}
+
+section:nth-of-type(3) div > a:hover {
+	background-color: var(--color-button-hover-primary);
+	color: var(--color-text);
+}
+
+section:nth-of-type(3) div > a:focus {
+	background-color: var(--color-focus);
+}
 
 
 /*------------------------------------------------------------------*/
@@ -904,13 +875,13 @@ input[type=radio]:nth-of-type(5) {
 
 
 /*------------------------------------------------------------------*/
-/*----------------------------Section 4-----check maar nog even hulpteksten plaatsen------------------------*/
+/*----------------------------Section 4-----------------------------*/
 /*------------------------------------------------------------------*/
 
 
 /* section 4 | video */
 section:nth-of-type(4) {
-	background-color: var(--color-background);
+	background-color: var(--color-background-primary);
 
 	padding-left: 1.5em;
 	padding-right: 1.5em;
@@ -924,6 +895,7 @@ section:nth-of-type(4) {
 
 }
 
+/* desktopweergave */
 @media screen and (min-width: 750px) {
 	section:nth-of-type(4) {
 		padding-left: 4em;
@@ -942,11 +914,14 @@ section:nth-of-type(4) {
 }
 
 
+/* volorde van video en tekst omwisselen */
 section:nth-of-type(4) > div:nth-of-type(1) {
 	order: 2;
 	margin-top: 1em;
 }
 
+
+/* desktopweergave */
 @media screen and (min-width: 750px) {
 	section:nth-of-type(4) > div:nth-of-type(1) {
 		margin-left: 2em;
@@ -956,7 +931,7 @@ section:nth-of-type(4) > div:nth-of-type(1) {
 }
 
 
-
+/* Video responsive maken */
 section:nth-of-type(4) div:nth-of-type(2) {
 	position: relative;
   	width: 100%;
@@ -965,13 +940,12 @@ section:nth-of-type(4) div:nth-of-type(2) {
 }
 
 
-/* even kijken of dit mag */
+/* h2 en h3 grid gemaakt om de volorde van de 2 elementen om te wisselen */
 section:nth-of-type(4) div div {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 }
-
 
 
 
@@ -1033,6 +1007,7 @@ section:nth-of-type(4) a {
 	border-radius: 2em;
 }
 
+
 section:nth-of-type(4) a:hover {
 	background-color: pink;
 	color: var(--color-button);
@@ -1044,6 +1019,7 @@ section:nth-of-type(4) a:focus {
 }
 
 
+/* code die helpt om video responsive te maken */
 iframe {
 	position: absolute;
   	top: 0;
@@ -1067,18 +1043,14 @@ iframe {
 
 
 
-
-
-
-
-
-
-
+/*------------------------------------------------------------------*/
+/*----------------------------Section 5-----------------------------*/
+/*------------------------------------------------------------------*/
 
 
 
 /* section 5 | More ways to find the perfect plant */
-
+/* opbouw mobiele weergave */
 section:nth-of-type(5) {
 	margin-top: 4em;
 	margin-bottom: 4em;
@@ -1088,6 +1060,7 @@ section:nth-of-type(5) {
 }
 
 
+/* opbouw desktop weergave */
 @media screen and (min-width: 750px) {
 	section:nth-of-type(5) {
 		padding-left: 4em;
@@ -1100,19 +1073,15 @@ section:nth-of-type(5) {
 }
 
 
+/* subtitel more ways to find the perfect plant */
 section:nth-of-type(5) h2 {
-	background-color: var(--color-background);
+	background-color: var(--color-background-primary);
 
 	font-family: 'nib-semibold';
 	color: var(--color-subtitel);
 	font-size: 20pt;
 	margin-bottom: 1em;
 }
-
-
-
-
-
 
 
 section:nth-of-type(5) ul{
@@ -1122,13 +1091,15 @@ section:nth-of-type(5) ul{
 }
 
 
-/* volorde afbeeldingen */
+/* volorde afbeeldingen (2 naast elkaar) */
 section:nth-of-type(5) li {
 
 	list-style: none;
 	flex-basis: 50%;
 }
 
+
+/* volorde afbeeldingen (4 naast elkaar) */
 @media screen and (min-width: 750px) {
 	section:nth-of-type(5) li {
 
@@ -1138,6 +1109,7 @@ section:nth-of-type(5) li {
 }
 
 
+/* opbouw afbeelding */
 section:nth-of-type(5) img{
 	width: 100%;
 	padding-left: 1em;
@@ -1145,17 +1117,18 @@ section:nth-of-type(5) img{
 }
 
 section:nth-of-type(5) img:nth-of-type(1){
-	/* width: 100%; */
 	padding-left: 0;
 	padding-right: 1em;
 }
 
 section:nth-of-type(5) img:nth-of-type(4){
 	width: 100%;
-	padding-left: 1;
+	padding-left: 1em;
 	padding-right: 0em;
 }
 
+
+/* ondertitel afbeelding */
 section:nth-of-type(5) figcaption {
 
 	text-align: center;
@@ -1165,7 +1138,9 @@ section:nth-of-type(5) figcaption {
 	margin-right: 1em;
 }
 
-/*-----------------------Einde-----------------------------*/
+/*------------------------------------------------------------------*/
+/*-----------------------Einde-Section-5----------------------------*/
+/*------------------------------------------------------------------*/
 
 
 
@@ -1174,17 +1149,12 @@ section:nth-of-type(5) figcaption {
 
 
 
-
-
-
-
-
-
-
-/* Section 6 */
+/*------------------------------------------------------------------*/
+/*----------------------------Section 6-----------------------------*/
+/*------------------------------------------------------------------*/
 
 section:nth-of-type(6) {
-	background-color: var(--color-background);
+	background-color: var(--color-background-primary);
 
 	padding-left: 1.5em;
 	padding-right: 1.5em;
@@ -1195,6 +1165,8 @@ section:nth-of-type(6) {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
+
+	row-gap: 2.2em;
 
 }
 
@@ -1212,6 +1184,8 @@ section:nth-of-type(6) {
 
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+
+		column-gap: 1em;
 	}
 }
 
@@ -1289,7 +1263,13 @@ section:nth-of-type(6) a:focus {
 section:nth-of-type(6) img {
   	width: 100%;
 	margin: auto;
+
 }
+
+
+/*------------------------------------------------------------------*/
+/*-----------------------Einde-Section-6----------------------------*/
+/*------------------------------------------------------------------*/
 
 
 
@@ -1302,6 +1282,15 @@ section:nth-of-type(6) img {
 /*---------------------------footer---------------------------------*/
 /*------------------------------------------------------------------*/
 
+
+
+/* achtergrondskleur footer */
+footer {
+	background-color: var(--color-background-tertiary);
+}
+
+
+
 /* section wordt door 4 stukjes gedeeld onderelkaar */
 footer section:nth-of-type(1) {
 	background-color: var(--color-background-tertiary);
@@ -1312,6 +1301,7 @@ footer section:nth-of-type(1) {
 	grid-template-rows: 1fr .25fr;
 
 	row-gap: 5.5em;
+	column-gap: 3em;
 
 	padding-top: 3em;
 	padding-left: 1.5em;
@@ -1350,11 +1340,15 @@ footer section:nth-of-type(1) {
 		padding-top: 3em;
 		padding-left: 1.5em;
 		padding-right: 1.5em;
+
+		max-width: 100%;
+		margin: auto;
+		width: 1450px;
 	}
 }
 
 
-
+/* opmaak kopjes */
 footer section:nth-of-type(1) h3 {
 	font-family: 'raisonne-demibold';
 	font-size: 9pt;
@@ -1362,6 +1356,15 @@ footer section:nth-of-type(1) h3 {
 	text-transform: uppercase;
 	opacity: 70%;
 	margin-bottom: 1.5em;
+}
+
+/* opmaak tekst/links */
+footer section:nth-of-type(1) p {
+	text-decoration: none;
+	color: var(--color-button-secondary);
+	font-family: 'circular';
+
+	margin-bottom: 1em;
 }
 
 
@@ -1388,29 +1391,98 @@ footer section:nth-of-type(1) a {
 	font-family: 'circular';
 }
 
+/* hover en focus */
+footer section:nth-of-type(1) a:hover {
+	color: var(--color-button-secondary);
+	font-family: 'circular';
+	border: solid 1px var(--color-background-primary);
+
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+footer section:nth-of-type(1) a:focus {
+	color: var(--color-focus);
+}
+
+
+
+
+/* opmaak lijst */
+footer section:nth-of-type(1) ul {
+	padding-left: 0;
+}
 
 
 footer section:nth-of-type(1) li {
 	list-style: none;
-	margin-left: -2.5em;
 	margin-bottom: 1em;
 }
 
 
 
+
+/* 2de sectie van footer */
 footer section:nth-of-type(2) {
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	justify-content: space-between;
 
 	background-color: var(--color-background-tertiary);
 	color: var(--color-background-secondary);
 }
 
-footer section:nth-of-type(2) li {
-	flex-basis: 25%;
+
+/* grid zo aangepast om term & policy naar sociaalmedia icoontjes op dezelfde regel te plaatsen */
+@media screen and (max-width: 600px) {
+	footer section:nth-of-type(2) {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
 }
 
+
+@media screen and (min-width: 1000px) {
+	footer section:nth-of-type(2) {
+		max-width: 100%;
+		margin: auto;
+		width: 1450px;
+
+		padding-left: 2em;
+		padding-right: 4em;
+	}
+}
+
+
+/* opmaak lijst en afbeelding */
+footer section:nth-of-type(2) ul {
+	display: flex;
+	padding-left: 0;
+}
+
+footer section:nth-of-type(2) ul:nth-of-type(2) {
+	align-items: center;
+	margin-top: 1em;
+	justify-content: end;
+
+}
+
+footer section:nth-of-type(2) li {
+	margin-left: 1em;
+	list-style: none;
+}
+
+
 footer section:nth-of-type(2) a {
-	color: var(--color-background);
+	color: var(--color-background-primary);
+}
+
+
+footer section:nth-of-type(2) img {
+	width: 1.2em;
+	height: auto;
+	margin-left: 1em;
 }

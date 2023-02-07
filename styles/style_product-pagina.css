@@ -2,130 +2,378 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box; 
-  border: 0;
-  margin: 0; 
-}
-
-button, summary {
-	cursor: pointer;
-}
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-
-
-
-/* fonts */
-@font-face {
-	font-family: 'circular';
-	src: url('../fonts/circular.woff2') format('woff2');
-}
-
-@font-face {
-	font-family: 'circular-bold';
-	src: url('../fonts/circular-bold.woff2') format('woff2');
-}
-
-@font-face {
-	font-family: 'nib-semibold';
-	src: url('../fonts/nib-semibold-pro.woff2') format('woff2');
-}
-
-@font-face {
-	font-family: 'nib-semibold-italic';
-	src: url('../fonts/nib-semibold-italic-pro.woff2') format('woff2');
-}
-
-@font-face {
-	font-family: 'nib-bold';
-	src: url('../fonts/nib-bold-pro.woff2') format('woff2');
-}
-
-@font-face {
-	font-family: 'raisonne-demibold';
-	src: url('../fonts/raisonne-demibold.woff2') format('woff2');
-}
-
-
-
-/* kleur */
-:root {
-	/* kleur achtergrond */
-	--color-background:#fcf9f3;
-	--color-background-secondary:#f8f3e7;
-	--color-background-tertiary:#224229;
-	--color-background-quaternary:#63180E;
-	
-	/* kleur text */
-	--color-text:#224229;
-	--color-text-secondary:#f6cfb2;
-
-	--color-titel:#224229;
-	--color-titel-secondary:#f8f3e7;
-
-	--color-subtitel:#224229;
-	--color-subtitel-secondary:#f8f3e7;
-
-	/* kleur button */
-	--color-button:#224229;
-	--color-button-secondary:#f4ebdb;
-	--color-button-tertiary:#f6cfb2;
-
-	--color-button-hover-primary: #f8f1e3;
-	--color-button-hover-secondary:#f4c49f;
-
-	/* kleur radio buttons */
-	--color-radio-stone:#e6e8ea;
-	--color-radio-clay:#c78356;
-	--color-radio-charcoal:#3b4037;
-	--color-radio-slate:#b7c7cd;
-	--color-radio-indigo:#3b5d7d;
-
-	/* kleur aanbieding */
-	--color-aanbieding-new:#018342;
-	--color-aanbieding-korting:#23356d;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+	box-sizing:border-box; 
+	border: 0;
+	margin: 0; 
+  }
+  
+  button, summary {
+	  cursor: pointer;
+  }
+  
+  
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  
+  
+  
+  /* fonts */
+  @font-face {
+	  font-family: 'circular';
+	  src: url('../fonts/circular.woff2') format('woff2');
+  }
+  
+  @font-face {
+	  font-family: 'circular-bold';
+	  src: url('../fonts/circular-bold.woff2') format('woff2');
+  }
+  
+  @font-face {
+	  font-family: 'nib-semibold';
+	  src: url('../fonts/nib-semibold-pro.woff2') format('woff2');
+  }
+  
+  @font-face {
+	  font-family: 'nib-semibold-italic';
+	  src: url('../fonts/nib-semibold-italic-pro.woff2') format('woff2');
+  }
+  
+  @font-face {
+	  font-family: 'nib-bold';
+	  src: url('../fonts/nib-bold-pro.woff2') format('woff2');
+  }
+  
+  @font-face {
+	  font-family: 'raisonne-demibold';
+	  src: url('../fonts/raisonne-demibold.woff2') format('woff2');
+  }
+  
+  
+  
+  /* kleur */
+  :root {
+	  /* kleur achtergrond */
+	  --color-background-primary:#fcf9f3;
+	  --color-background-secondary:#f8f3e7;
+	  --color-background-tertiary:#224229;
+	  --color-background-quaternary:#63180E;
+	  
+	  /* kleur text */
+	  --color-text:#224229;
+	  --color-text-secondary:#f8f3e7;
+  
+	  --color-titel:#224229;
+	  --color-titel-secondary:#f8f3e7;
+  
+	  --color-subtitel:#224229;
+	  --color-subtitel-secondary:#f8f3e7;
+  
+	  /* kleur button */
+	  --color-button:#224229;
+	  --color-button-secondary:#f4ebdb;
+	  --color-button-tertiary:#f6cfb2;
+  
+	  --color-button-hover-primary:#ffc0cb;
+	  --color-button-hover-secondary:#b13043;
+  
+	  /* kleur radio buttons */
+	  --color-radio-stone:#e6e8ea;
+	  --color-radio-clay:#c78356;
+	  --color-radio-charcoal:#3b4037;
+	  --color-radio-slate:#b7c7cd;
+	  --color-radio-indigo:#3b5d7d;
+  
+	  /* kleur aanbieding */
+	  --color-aanbieding-new:#018342;
+	  --color-aanbieding-korting:#23356d;
+  
+	  /* kleur (a) link */
+	  --color-link-primary:#224229;
+	  --color-link-secondary:#f4ebdb;
+	  --color-link-tertiary:#f6cfb2;
+  
+	  /* kleur hover & focus (a | links) */
+	  --color-hover-primary:#ffc0cb;
+	  --color-hover-secondary:#b13043;
+	  --color-focus: #b13043;
+  }
+  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  /*------------------------------------------------------------------*/
+  /*----------------------------Header--------------------------------*/
+  /*------------------------------------------------------------------*/
+  
+  
+  /* navigatie, menu en aanbiedingsbalk */
+  header {
+	  background-color: var(--color-background-primary);
+	  
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+  
+	  align-items: center;
+  
+	  padding-bottom: .6em;
+  
+	  /* maakt het mogelijk om aanbiedingsbalk te verdwijnen bij het scrollen */
+	  position: sticky;
+	  top: -2.1em;
+  }
+  
+  
+  
+  
+  
+  /* Groene balk | Top van de pagina*/
+  header p {
+	  background-color: var(--color-text);
+  
+	  width: 100%;
+	  order: -100;
+  
+	  font-family: 'circular';
+	  font-size: 13pt;
+	  line-height: 2em;
+	  text-align: center;
+  
+	  padding: 0 .5em;
+  }
+  
+  
+  /* aanbiedingslink */
+  header p a{
+	  color: var(--color-background-secondary);
+  }
+  
+  /* aanbiedingslink hover */
+  header p a:hover{
+	  color: var(--color-hover-primary);
+  }
+  
+  /* aanbiedingslink focus */
+  header p a:focus{
+	  color: var(--color-focus);
+  }
+  
+  
+  
+  /* logo bloomscape */
+  header img {
+	  width: 10.5em;
+	  padding-top: .8em;
+  }
+  
+  
+  
+  /* icoontje | winkelwagen */
+  header nav img{
+	  width: 1.5em;
+	  justify-content: end;
+  }
+  
+  
+  header nav:nth-of-type(2) ul{
+	  padding-left: 0;
+	  margin-left: .1em;
+	  margin-right: 1em;
+  }
+  
+  
+  header nav:nth-of-type(2) li{
+	  list-style: none;
+	  align-self: center;
+  }
+  
+  
+  
+  /* menubutton */
+  header button {
+	  order: -50;
+  
+	  border-radius: 1.2em;
+	  background-color: var(--color-button);
+	  color: var(--color-button-secondary);
+  
+	  padding-left: 1em;
+	  padding-right: 1em;
+	  padding-top: .5em;
+	  padding-bottom: .5em;
+  
+	  margin-top: .7em;
+	  margin-left: 1em;
+  
+  }
+  
+  
+  
+  /* menu verborgen | mobiele weergave */
+  header nav:nth-of-type(1) {
+	  display: flex;
+	  justify-content: space-between;
+	  
+	  position: fixed;
+  
+	  left: 0;
+	  top: 0;
+	  bottom: 0;
+  
+	  width: 100%;
+	  max-width: 18.7em;
+  
+	  background-color: var(--color-background-tertiary);
+	  transform: translateX(-100%);
+  
+	  /* de sluit button (X) komt boven in te staan */
+	  align-items: flex-start;
+  }
+  
+  
+  
+  /* opmaak menu */
+  header nav:nth-of-type(1) ul {
+	  padding: 0;
+	  margin-top: 3em;
+  }
+  
+  header nav:nth-of-type(1) a {
+	  font-family: 'raisonne-demibold';
+	  font-size: 10pt;
+	  text-decoration: none;
+	  text-transform: uppercase;
+  }
+  
+  header nav:nth-of-type(1) a:hover {
+	  border: solid 1px var(--color-button-hover-primary);
+  
+	  border-top: none;
+	  border-left: none;
+	  border-right: none;
+  }
+  
+  header nav:nth-of-type(1) li{
+	  list-style: none;
+	  text-align: left;
+  
+	  padding: 1em;
+  }
+  
+  
+  
+  /* als er op de button gedrukt wordt verplaatst het verborgen gedeelte op het scherm (van links naar rechts) (mobiele weergave) */
+  header nav:nth-of-type(1).actief{
+	  transform: translateX(0%);
+  }
+  
+  header nav:nth-of-type(1) a{
+	  color: var(--color-link-secondary);
+  }
+  
+  
+  
+  /* sluitbutton menu */
+  header nav:nth-of-type(1) button{
+	  order: 1;
+	  position: static;
+	  margin-top: .5em;
+  
+	  font-family: 'circular-bold';
+	  text-transform: uppercase;
+	  font-size: 20pt;
+	  color: var(--color-background-primary);
+  }
+  
+  
+  
+  /* navigatie op desktop weergave */
+  @media (min-width:60em) {
+  
+  
+	  /* verwijdering van de padding zodat boven als onder evenveel witruimte heeft */
+	  header {
+		  padding-bottom: 0;
+	  }
+  
+  
+	  /* menubutton wordt verwijderd/onzichtbaar */
+	  header button {
+		  display: none;
+	  }
+  
+  
+	  /* logo bloomscape */
+	  header img {
+		  width: 10.5em;
+		  padding-top: .8em;
+		  margin-left: 2em;
+		  }
+  
+  
+	  /* Opmaak mobiele menu wordt op navigatie desktop weergave geplaatst (opmaak veranderd dus) */
+	  header nav:nth-of-type(1) {
+		  position: static;
+		  background: none;
+		  transform: none;
+		  justify-content: center;
+  
+	  
+		  width: 60%;
+		  max-width: 50em;
+  
+		  /* grid (menu onderdelen) verticaal centreren op de pagina */
+		  justify-content: center;
+	  }
+	  
+  
+	  /* opmaak koppelingen dat uit het menu op de navigatie balk geplaatst wordt (lijst wordt verticaal naast elkaar geplaatst)*/
+	  header nav:nth-of-type(1) ul {
+		  display: flex;
+		  justify-content: center;
+  
+		  padding-left: 0;
+		  margin-top: 0;
+	  }
+  
+  
+	  /* kleur verandering dat zichtbaar is op lichte achtergrond */
+	  header nav:nth-of-type(1) a{
+		  color: var(--color-background-tertiary);
+	  }
+  
+  
+	  /* hover en focus states */
+	  header nav:nth-of-type(1) a:hover {
+		  color: var(--color-button-hover-secondary);
+		  border-color: var(--color-background-tertiary);
+	  }
+  
+  
+	  header nav:nth-of-type(1) a:focus {
+		  color: var(--color-focus);
+	  }
+  
+  
+	  /* verwijderen van linkjes die niet in de navigatie balk staan. */
+	  header nav:nth-of-type(1) li:nth-of-type(6), li:nth-of-type(7), li:nth-of-type(8){
+		  display: none;
+	  }
+  
+	  
+	  /* sluitbutton niet nodig op desktopversie */
+	  header nav:nth-of-type(1) button{
+		  display: none;
+	  }
+  }
+  
+/*------------------------------------------------------------------*/
+/*-------------------------Einde-Header-----------------------------*/
+/*------------------------------------------------------------------*/
 
 
 
@@ -138,11 +386,11 @@ button, summary {
 /*------------------------------------------------------------------*/
 
 main {
-	background-color: var(--color-background);
+	background-color: var(--color-background-primary);
 }
 
 /* titel verborgen */
-h1 {
+main h1 {
 	display: none;
 }
 
@@ -153,32 +401,39 @@ h1 {
 /*------------------------------------------------------------------*/
 
 
-/* main section {
+main section {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	grid-column-gap: 8em;
+	/* grid-template-rows: 22em 1fr 14em 1fr; */
+	grid-template-rows: auto 1fr 1fr auto;
+
+	row-gap: 1em;
+
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+
+	background-color: var(--color-background-primary);
+
+	padding-bottom: 2em;
+}
+
+
+@media (min-width:990px){
+	main section {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	grid-template-rows: auto;
+	grid-column-gap: 7em;
 	grid-row-gap: 2em;
 
 	max-width: 100%;
 	margin: auto;
 	width: 1200px;
-} */
-
-main section {
-	display: grid;
-	grid-template-rows: 22em 1fr 14em 1fr;
-
-	row-gap: 2em;
-
-	margin-top: 3em;
-
-	margin-left: 1em;
-	margin-right: 1em;
+	}
 }
 
 
-section ul {
+main section > ul {
 	overflow: auto;
 	display: flex;
 	padding-left: 0;
@@ -186,16 +441,29 @@ section ul {
 	height: 22em;
 }
 
+@media (min-width:990px){
+	main section ul {
+		height: 38em;
+	}
+}
 
-section li {
+
+main section li {
 	list-style: none;
 	margin-right: .8em;
 }
 
 
-section img {
+main section img {
 	width: 17em;
 	height: auto;
+}
+
+@media (min-width:990px){
+	main section img {
+		width: 30em;
+		height: auto;
+	}
 }
 
 
@@ -204,9 +472,11 @@ section img {
 
 
 
+/*------------------------------------------------------------------*/
+/*----------------------------formulier-----------------------------*/
+/*------------------------------------------------------------------*/
 
-
-
+/* formulier is opgedeeld in een grid */
 form {
 	display: grid;
 	grid-template-columns: 7em 2fr 1fr;
@@ -214,8 +484,9 @@ form {
 }
 
 
+/* titel product */
 form h2 {
-	/* de plaatsing in het grid */
+	/* de positie in het grid */
 	grid-column-start: 1;
 	grid-column-end: 3;
 
@@ -230,6 +501,14 @@ form h2 {
 
 	align-self: center;
 }
+
+/* font wordt groter | titel product */
+@media (min-width:990px){
+	form h2 {
+		font-size: 18pt;
+	}
+}
+
 
 
 
@@ -253,6 +532,13 @@ form p:nth-of-type(1) {
 }
 
 
+/* font wordt groter | prijs product */
+@media (min-width:990px){
+	form p:nth-of-type(1) {
+		font-size: 18pt;
+	}
+}
+
 
 /* tekst over het product */
 form p:nth-of-type(2) {
@@ -272,6 +558,15 @@ form p:nth-of-type(2) {
 	align-self: center;
 }
 
+/* font wordt groter | prijs product */
+@media (min-width:990px){
+	form p:nth-of-type(2) {
+		font-size: 13pt;
+	}
+}
+
+
+
 form fieldset {
 	grid-column-start: 1;
 	grid-column-end: 4;
@@ -282,9 +577,6 @@ form fieldset {
 	align-self: center;
 	padding-left: 0;
 }
-
-
-/* geinidngt */
 
 
 /* styling radio buttons*/
@@ -357,15 +649,14 @@ input[type=radio]:nth-of-type(5) {
 }
 
 
+
+
 /* opmaak aantal knop */
-section form > div {
+main section form > div {
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 
 	border: solid 1px var(--color-button);
-	/* width: 5em; */
-	/* padding-top: .5em;
-	padding-bottom: .5em; */
 	border-radius: 28px;
 
 	align-items: center;
@@ -381,24 +672,17 @@ section form > div {
 	
 }
 
-section form > div button {
+main section form > div button {
 	background-color: transparent;
 	font-size:  17pt;
 	
 }
 
-section form > button {
-	/* grid-column-start: 2;
-	grid-column-end: 3;
 
-	grid-row-start: 4;
-	grid-row-end: 5; */
-
+main section form > button {
 	align-self: center;
 	justify-self: start;
 	margin-left: 1em;
-
-
 
 	color: var(--color-text);
 	background-color: var(--color-background-tertiary);
@@ -406,31 +690,63 @@ section form > button {
 
 
 	font-family: 'raisonne-demibold';
-	font-size: 11pt;
-	text-decoration: none;
-	text-transform: uppercase;
+	font-size: 10pt;
+    text-decoration: none;
+    text-transform: uppercase;
 
-	padding-top: 1.2em;
-	padding-bottom: 1.2em;
+    padding-top: 1.4em;
+    padding-bottom: 1.4em;
 
-	padding-left: 1.2em;
-	padding-right: 1.2em;
+    padding-left: 2em;
+    padding-right: 2em;
 
 	border-radius: 2em;
 }
 
-
-
-
-
-
-section > div:nth-of-type(2) {
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-	justify-items: center;
+main section form > button:hover {
+	background-color: var(--color-button-hover-primary);
 }
 
-section div:nth-of-type(2) h2 {
+main section form > button:focus {
+	background-color: var(--color-focus);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------*/
+/*--------------------shipping en guarantee-------------------------*/
+/*------------------------------------------------------------------*/
+
+
+/* free shipping & Guarantee */
+main section > div:nth-of-type(2) {
+	display: grid;
+	grid-template-rows: auto auto;
+	justify-items: center;
+
+	column-gap: 1em;
+}
+
+/* andere opbouw op desktop weergave | i.p.v onder elkaar naar naast elkaar */
+@media (min-width:990px){
+	main section > div:nth-of-type(2) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
+}
+
+
+/* subtitel free shipping & guarantee */
+main section div:nth-of-type(2) h2 {
 	text-align: center;
 
 	color: var(--color-background-tertiary);
@@ -439,56 +755,127 @@ section div:nth-of-type(2) h2 {
 	font-size: 14pt;
 }
 
-section div:nth-of-type(2) h2:nth-of-type(1) {
-	order: 2;
+
+/* centreren van afbeelding/icoontjes */
+main section > div:nth-of-type(2) img {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+
+	  width: 35px;
 }
 
-section div:nth-of-type(2) h2:nth-of-type(2) {
-	order: 5;
-}
 
-
-
-section div:nth-of-type(2) p {
+/* opmaak tekst free shipping & guarantee */
+main section > div:nth-of-type(2) p {
 	text-align: center;
 
 	font-family: 'circular';
 	font-size: 10pt;
 
+	margin-bottom: 2em;
+
 	line-height: 1.5em;
 	color: var(--color-background-tertiary);
 }
 
-section div:nth-of-type(2) p:nth-of-type(1) {
-	text-align: center;
-	order: 3;
 
-	margin-bottom: 2em;
-
+main section > div:nth-of-type(2) a:hover {
+	color: var(--color-button-hover-secondary);
 }
 
-section div:nth-of-type(2) p:nth-of-type(2) {
-	text-align: center;
-	order: 6;
-
+main section > div:nth-of-type(2) a:focus {
+	color: var(--color-focus);
 }
 
 
 
-section div:nth-of-type(2) img {
-	width: 35px;
+
+
+/*------------------------------------------------------------------*/
+/*---------------------------uitklap menu---------------------------*/
+/*------------------------------------------------------------------*/
+
+
+
+main section > div:nth-of-type(3) ul {
+	padding-left: 0;
 }
 
 
-section div:nth-of-type(2) img:nth-of-type(1) {
-	width: 35px;
-	order: 1;
+/* titel uitklapmenu | detials & Care */
+main section > div:nth-of-type(3) h2{
+	color: var(--color-background-tertiary);
+
+	font-family: 'raisonne-demibold';
+	text-transform: uppercase;
+	font-size: 12pt;
 }
 
-section div:nth-of-type(2) img:nth-of-type(2) {
-	width: 35px;
-	order: 4;
+/* h2 en button op dezelfde regel plaatsen (detials & Care en V) */
+main section > div:nth-of-type(3) div:nth-of-type(1){
+	display: flex;
+	justify-content: space-between;
 }
+
+
+/* uitklapmenu */
+.collapsible {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border: solid 1px var(--color-background-tertiary);
+
+	border-left: none;
+	border-right: none;
+  }
+
+
+/* maakt vorm van button ontzichtbaar */
+main section > div:nth-of-type(3) button{
+	background-color: transparent;
+}
+
+main section > div:nth-of-type(3) button:hover{
+	color: var(--color-button-hover-secondary);
+}
+
+main section > div:nth-of-type(3) button:focus{
+	color: var(--color-focus);
+}
+
+
+  
+.content {
+	max-height: 0;
+	overflow: hidden;
+	background-color: transparent;
+  }
+
+
+.content li {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 0;
+  }
+
+main h3 {
+	margin-top: 1em;
+	font-size: 12pt;
+	font-family: 'circular-bold';
+	color: var(--color-subtitel);
+}
+
+main section > div:nth-of-type(3) p {
+	font-family: 'circular';
+	font-size: 10pt;
+
+	margin-top: 1.5em;
+
+	line-height: 1.5em;
+	color: var(--color-background-tertiary);
+}
+
+
 /*------------------------------------------------------------------*/
 /*-----------------------Einde-Section-1----------------------------*/
 /*------------------------------------------------------------------*/
@@ -497,108 +884,211 @@ section div:nth-of-type(2) img:nth-of-type(2) {
 
 
 
+/*------------------------------------------------------------------*/
+/*---------------------------footer---------------------------------*/
+/*------------------------------------------------------------------*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-/* Uitklapmenu */
-
-section > div:nth-of-type(3) h2{
-	color: var(--color-background-tertiary);
-
-	font-family: 'raisonne-demibold';
-	text-transform: uppercase;
-	font-size: 12pt;
-}
-
-section > div:nth-of-type(3) div:nth-of-type(1){
-	display: flex;
+/* achtergrondskleur footer */
+footer {
+	background-color: var(--color-background-tertiary);
 }
 
 
-.collapsible {
-	background-color: var(--color-background-secondary);
-	color: white;
-	cursor: pointer;
-	padding: 18px;
-	width: 100%;
-	border: none;
-	text-align: left;
-	outline: none;
-	font-size: 15px;
-  }
 
+/* section wordt door 4 stukjes gedeeld onderelkaar */
+footer section:nth-of-type(1) {
+	background-color: var(--color-background-tertiary);
+	color: var(--color-background-secondary);
 
-  section > div:nth-of-type(3) button{
-	background-color: transparent;
-}
-
-  
-  .active, .collapsible:hover {
-	background-color: #555;
-  }
-  
-  .content {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr .25fr;
 
-	padding: 0 18px;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
-	background-color: #f1f1f1;
-  }
+	row-gap: 5.5em;
+	column-gap: 3em;
+
+	padding-top: 3em;
+	padding-left: 1.5em;
+
+}
+
+/* section word door 2 stukjes verdeeld */
+/* max moet nog naar min */
+@media screen and (max-width: 600px) {
+	footer section:nth-of-type(1) {
+		background-color: var(--color-background-tertiary);
+		color: var(--color-background-secondary);
+
+		display: grid;
+		grid-template-rows: .25fr 1fr .25fr .25fr;
+		grid-template-columns: 0fr;
+
+		row-gap: 2em;
+
+		padding-top: 3em;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+	}
+}
+
+/* section staan alle stukjes naast elkaar */
+@media screen and (min-width: 1000px) {
+	footer section:nth-of-type(1) {
+		background-color: var(--color-background-tertiary);
+		color: var(--color-background-secondary);
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 0fr;
+
+		padding-top: 3em;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+
+		max-width: 100%;
+		margin: auto;
+		width: 1450px;
+	}
+}
+
+
+/* opmaak kopjes */
+footer section:nth-of-type(1) h3 {
+	font-family: 'raisonne-demibold';
+	font-size: 9pt;
+	text-decoration: none;
+	text-transform: uppercase;
+	opacity: 70%;
+	margin-bottom: 1.5em;
+}
+
+/* opmaak tekst/links */
+footer section:nth-of-type(1) p {
+	text-decoration: none;
+	color: var(--color-button-secondary);
+	font-family: 'circular';
+
+	margin-bottom: 1em;
+}
+
+
+footer section:nth-of-type(1) label {
+	font-family: 'circular';
+}
+
+footer section:nth-of-type(1) input {
+	background-color: var(--color-background-tertiary);
+	
+	
+	border-color: rgb(251, 249, 244);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0px;
+
+	height: 2em;
+}
+
+
+footer section:nth-of-type(1) a {
+	text-decoration: none;
+	color: var(--color-button-secondary);
+	font-family: 'circular';
+}
+
+/* hover en focus */
+footer section:nth-of-type(1) a:hover {
+	color: var(--color-button-secondary);
+	font-family: 'circular';
+	border: solid 1px var(--color-background-primary);
+
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+footer section:nth-of-type(1) a:focus {
+	color: var(--color-focus);
+}
 
 
 
 
+/* opmaak lijst */
+footer section:nth-of-type(1) ul {
+	padding-left: 0;
+}
+
+
+footer section:nth-of-type(1) li {
+	list-style: none;
+	margin-bottom: 1em;
+}
 
 
 
 
+/* 2de sectie van footer */
+footer section:nth-of-type(2) {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	justify-content: space-between;
+
+	background-color: var(--color-background-tertiary);
+	color: var(--color-background-secondary);
+}
 
 
-/* 
-  header  */
+/* grid zo aangepast om term & policy naar sociaalmedia icoontjes op dezelfde regel te plaatsen */
+@media screen and (max-width: 600px) {
+	footer section:nth-of-type(2) {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+}
+
+
+@media screen and (min-width: 1000px) {
+	footer section:nth-of-type(2) {
+		max-width: 100%;
+		margin: auto;
+		width: 1450px;
+
+		padding-left: 2em;
+		padding-right: 4em;
+	}
+}
+
+
+/* opmaak lijst en afbeelding */
+footer section:nth-of-type(2) ul {
+	display: flex;
+	padding-left: 0;
+}
+
+footer section:nth-of-type(2) ul:nth-of-type(2) {
+	align-items: center;
+	margin-top: 1em;
+	justify-content: end;
+
+}
+
+footer section:nth-of-type(2) li {
+	margin-left: 1em;
+	list-style: none;
+}
+
+
+footer section:nth-of-type(2) a {
+	color: var(--color-background);
+}
+
+
+footer section:nth-of-type(2) img {
+	width: 1.2em;
+	height: auto;
+	margin-left: 1em;
+}

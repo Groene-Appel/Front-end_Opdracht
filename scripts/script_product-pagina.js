@@ -1,13 +1,53 @@
 
 console.log('Aantal gekozen producten');
 
-// declaratie van DOM objecten
+/// Navigatie menu open ///
+var menuButton = document.querySelector ("header > button");
+console.log(menuButton);
+
+
+var menuNav = document.querySelector ("header nav:nth-of-type(1)");
+console.log(menuNav);
+
+
+menuButton.addEventListener("click", openMenu);
+
+
+function openMenu() {
+    menuNav.classList.add("actief");
+
+    console.log("menu is open");
+}
+
+
+
+
+
+/// Navigatie menu sluiten ///
+var menuSluitButton = document.querySelector ("header nav:nth-of-type(1) button");
+console.log(menuSluitButton);
+
+
+menuSluitButton.addEventListener("click", sluitMenu);
+
+
+function sluitMenu() {
+    menuNav.classList.remove("actief")
+
+    console.log("menu is gesloten");
+}
+
+
+
+
+
+//aangeven hoeveelheid producten
 var aantalMinder = document.querySelector('#aantalMinder');
 var aantalMeer = document.querySelector('#aantalMeer');
 var aantalProducten = document.querySelector('#aantal');
 
 // begin toestand 
-var aantal = 1 ; // de score begint op 1
+var aantal = 1 ; // het aantal begint op 1
 
 // aantalProducten update functie
 function updateScore(erbij = 1) {
@@ -17,28 +57,29 @@ function updateScore(erbij = 1) {
 }
 
 // eventHandler functies
-function puntErbij() {
+function aantalErbij() {
 	console.log('doe er een punt bij');
 
-    // hier de aanroep van de functie om punten bij te houden
     updateScore( +1 );
 }
 
-function puntEraf() {
+function aantalEraf() {
 	console.log('doe er een punt af');
 
-    // hier de aanroep van de functie om punten bij te houden
     updateScore( -1 );
 }
 
 // eventListeners op de knoppen
-aantalMeer.addEventListener('click', puntErbij );
-aantalMinder.addEventListener('click', puntEraf );
+aantalMeer.addEventListener('click', aantalErbij );
+aantalMinder.addEventListener('click', aantalEraf );
 
 
 
 
-/// Navigatie menu sluiten ///
+
+
+
+/// uitklapmenu product-pagina ///
 // code van: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_animate
 var uitklapMenu = document.getElementsByClassName("collapsible");
 var i;
